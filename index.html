@@ -458,33 +458,11 @@
             }
         });
 
-        // Form submission (basic example, no actual backend integration)
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // In a real application, you would send this data to a server.
-            console.log('Form submitted!');
-            const form = e.target;
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
 
-            // Simple success message
-            const submitButton = form.querySelector('button[type="submit"]');
-            submitButton.textContent = 'Pesan Terkirim!';
-            submitButton.classList.remove('bg-amber-600', 'hover:bg-amber-700');
-            submitButton.classList.add('bg-green-500');
-            submitButton.disabled = true;
-
-            setTimeout(() => {
-                submitButton.textContent = 'Kirim Pesan';
-                submitButton.classList.remove('bg-green-500');
-                submitButton.classList.add('bg-amber-600', 'hover:bg-amber-700');
-                submitButton.disabled = false;
-                form.reset(); // Reset form fields
-            }, 3000);
-        });
     </script>
 </body>
 </html>
+
 
 
 
