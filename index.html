@@ -457,11 +457,15 @@
                 navLinks.classList.add('hidden');
             }
         });
-
+        window.addEventListener('pageshow', function(event) {
+            const form = document.querySelector('form[action^="https://formspree.io"]');
+            if (form) form.reset();
+        });
 
     </script>
 </body>
 </html>
+
 
 
 
